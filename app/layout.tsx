@@ -32,6 +32,9 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <div className="bg-neutral-800">
+          <p className="text-neutral-400 text-sm text-center py-2">ডেভেলপড বাই - শিহাব আহমেদ</p>
+        </div>
       </body>
     </html>
   );

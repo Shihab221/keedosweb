@@ -10,7 +10,7 @@ const Categories = () => {
       <div className='flex flex-row w-full justify-center items-center gap-4'>
         {categoriesData.map((item,index)=>(
             <Link href="#" key={index}>
-                <div className='bg-lime-50 rounded-xl p-4 border shadow-sm' >
+                <div className='bg-lime-50 rounded-xl p-4 shadow-md' >
                     <Image 
                     src={item.image}
                     alt='categories_images'
@@ -18,7 +18,7 @@ const Categories = () => {
                     height={100}
                     className='w-[140px] h-[140px] object-contain '
                     />
-                <p className='text-neutral-900 text-center'>{item.title}</p>
+                <p className='text-neutral-900 text-center font-semibold '>{item.title}</p>
                 </div>
             </Link>
         ))}

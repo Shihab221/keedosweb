@@ -5,8 +5,8 @@ import Button from './button'
 
 const PopularToys = () => {
   return (
-    <div className='px-10 py-10'>
-      <div className='mb-4 flex flex-row justify-between text-neutral-900'>
+    <div className='px-10 py-10 my-10'>
+      <div className='mb-4 flex flex-row justify-between items-center text-neutral-900'>
         <h2 className='text-2xl font-bold '>Most Popular Toys</h2>
         <Button 
         text="Explore more"

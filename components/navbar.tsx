@@ -40,14 +40,14 @@ const Navbar = () => {
 
       {/* navbar */}
       <div className='flex flex-row justify-between'>
-        <div className='bg-neutral-900 flex flex-row justify-between items-center'>
+        <div className='bg-neutral-900 flex flex-row justify-between items-center w-72'>
           <p className='text-center px-4 py-2'>Browse Categories</p>
           <BiArrowFromTop size={16} className='text-white mx-4'/>
         </div>
 
-        <div className='flex flex-row justify-'>
+        <div className='flex flex-row justify-between w-full sm:pl-20'>
           {navbarData.map((item, index) => (
-            <div key={index} className='flex flex-row items-center justify-between py-2 px-10'>
+            <div key={index} className='flex flex-row items-center justify-between py-2'>
                 <p className='text-neutral-900 font-semibold text-md'>{item.title}</p>
             </div>
           ))}

@@ -3,7 +3,7 @@ import React from 'react'
 import {  FaStar } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
 
-const ProductCard = ({title, price, rating, reviews, badge, badgeColor, image}) => {
+const ProductCard = ({title, price, rating, reviews, badge, badgeColor, image, discount, originalPrice}) => {
   return (
     <div className='flex flex-col items-start rounded-lg text-neutral-900 '>
       

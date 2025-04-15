@@ -75,6 +75,65 @@ export const popularProductsData = [
     },
   ];
 
+export const topProductsData = [
+  {
+    id: 1,
+    title: "Walt Disney Tribute Camera",
+    price: 100.0,
+    originalPrice: 160.0,
+    discount: "40% Off",
+    badgeColor: "bg-red-500",
+    rating: 4.8,
+    reviews: "9.5K",
+    image:"/images/product1.png",
+  },
+  {
+    id: 2,
+    title: "Tranquil Garden",
+    price: 19.0,
+    originalPrice: 29.0,
+    discount: "10% Off",
+    badge: "New",
+    badgeColor: "bg-red-500",   // Discount
+    secondaryBadgeColor: "bg-teal-500", // New
+    rating: 4.7,
+    reviews: "409",
+    image: "/images/product2.png",
+  },
+  {
+    id: 3,
+    title: "Hokusai – The Great Wave",
+    price: 99.99,
+    originalPrice: 119.0,
+    discount: "20% Off",
+    badgeColor: "bg-red-500",
+    rating: 4.8,
+    reviews: "72",
+    image: "/images/product3.png",
+  },
+  {
+    id: 4,
+    title: "Kids Metal Airplane",
+    price: 299.99,
+    originalPrice: 310.0,
+    discount: "10% Off",
+    badgeColor: "bg-red-500",
+    rating: 4.8,
+    reviews: "9.5K",
+    image: "/images/product4.png",
+  },
+  {
+    id: 5,
+    title: "Great Pyramid of Giza",
+    price: 129.99,
+    originalPrice: 199.99,
+    discount: "15% Off",
+    badgeColor: "bg-red-500",
+    rating: 4.6,
+    reviews: "52",
+    image: "/images/product2.png",
+  },
+];
   export const footerLinksData = {
     AboutUs: [
       "About the Keedos",

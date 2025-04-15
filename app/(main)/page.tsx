@@ -6,6 +6,7 @@ import heroImage from "../../public/images/KeedosHero.jpg"
 import PopularToys from '@/components/popularToys'
 import PlayRoom from '@/components/playRoom'
 import Footer from '@/components/footer'
+import TopDeals from '@/components/topDeals'
 const page = () => {
   return (
     <div className='bg-white '>
@@ -20,6 +21,7 @@ const page = () => {
       <Categories />
       <PopularToys />
       <PlayRoom />
+      <TopDeals />
       <Footer />
     </div>
   )

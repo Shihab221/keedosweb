@@ -74,4 +74,37 @@ export const popularProductsData = [
       image: '/images/globe.png',
     },
   ];
+
+  export const footerLinksData = {
+    AboutUs: [
+      "About the Keedos",
+      "Compliance Line",
+      "Keedos News",
+      "Sustainability",
+      "Supply Chain",
+    ],
+    Support: [
+      "Replacement parts",
+      "Shipping & Returns",
+      "Payment Methods",
+      "Product Recalls",
+      "Gift Card",
+    ],
+    Attractions: [
+      "Keedos House",
+      "Keedos Land Parks",
+      "Discovery Centers",
+      "Keedos Catalogs",
+      "Find a Keedos Store",
+    ],
+    MoreFromUs: [
+      "Keedos Education",
+      "Keedos Foundation",
+      "Affiliate Program",
+      "Keedos Braille Bricks",
+      "Keedos Life",
+      "Keedos Ideas",
+    ],
+  };
+  
   

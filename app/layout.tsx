@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { Poppins } from 'next/font/google';
+import { Coustard } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,6 +14,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+
+const poppins = Poppins({ subsets: ['latin'],weight: ["100", "300", "400", "700", "900"], variable: '--font-poppins' });
+
+const coustard = Coustard({ subsets: ['latin'],weight: ["400"], variable: '--font-poppins' });
 
 export const metadata: Metadata = {
   title: "Create Next App",

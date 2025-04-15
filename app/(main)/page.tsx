@@ -5,9 +5,10 @@ import React from 'react'
 import heroImage from "../../public/images/KeedosHero.jpg"
 import PopularToys from '@/components/popularToys'
 import PlayRoom from '@/components/playRoom'
+import Footer from '@/components/footer'
 const page = () => {
   return (
-    <div className='bg-white'>
+    <div className='bg-white '>
       <Image
       src={heroImage}
       alt='hero_image'
@@ -19,6 +20,7 @@ const page = () => {
       <Categories />
       <PopularToys />
       <PlayRoom />
+      <Footer />
     </div>
   )
 }

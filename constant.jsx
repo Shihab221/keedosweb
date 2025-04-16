@@ -94,8 +94,8 @@ export const topProductsData = [
     originalPrice: 29.0,
     discount: "10% Off",
     badge: "New",
-    discountBadgeColor: "bg-teal-500",   // Discount
-    secondaryBadgeColor: "bg-teal-500", // New
+    discountBadgeColor: "bg-red-500",   // Discount
+    badgeColor: "bg-teal-600", // New
     rating: 4.7,
     reviews: "409",
     image: "/images/product2.png",

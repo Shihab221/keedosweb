@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import {  FaStar } from 'react-icons/fa'
@@ -8,13 +9,18 @@ const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discount
     <div className='flex flex-col items-start rounded-lg text-neutral-900 '>
       
        <div className='flex flex-row justify-between items-center w-full bg-neutral-100 px-2 py-3'>
-            <p className={`text-xs rounded-xs px-2 ${discountBadgeColor}`}>
-              {discount}
-            </p>
-            <p className ={`text-xs rounded-xs px-2 text-white ${badgeColor}`} >
-            {badge}
-            </p>
-            <AiOutlineHeart size={16} className='mx-2'/>
+            
+            <div className='flex flex-row gap-2'>
+              {discount && <p className={`text-xs rounded-xs px-2 py-1 text-white ${discountBadgeColor}`}>
+                {discount}
+              </p>}
+              {badge && <p className ={`text-xs rounded-xs px-2 py-1 text-white ${badgeColor}`} >
+              {badge}
+              </p>}
+            </div>
+            <AiOutlineHeart size={18} className='mx-2 cursor-pointer' onClick={()=>(
+              alert('Added to favourites')
+            )}/>
        </div>
       <Image 
         src={image}

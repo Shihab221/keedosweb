@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <div className='flex flex-col px-10 pt-10 my-10'>
 
-      <div className='flex flex-row'>
-        <div className='mx-10 w-sm'>
+      <div className='flex flex-col sm:flex-row items-center'>
+        <div className='mx-10 w-sm flex flex-col items-center sm:items-start mb-4'>
           <Image 
             src={logo}
             alt='logo'
@@ -18,7 +18,8 @@ const Footer = () => {
           />
           <p className='text-neutral-700'>Keedos Store 2/A, RA 7300 building,<br/>Jhenaidah - 7300, Khulna, Bangladesh. <br/>Must be 18 years to purchase online.</p>
         </div>
-        <div className='text-neutral-900 flex flex-col md:flex-row items-start justify-between w-4xl'>
+
+        <div className='text-neutral-900 flex flex-col md:flex-row items-center sm:items-start justify-between w-full gap-4'>
             {Object.entries(footerLinksData).map(([section,links],index)=>(
             <div key={index} className='flex flex-col gap-2'>
             <h3 className='font-bold mb-4'>{section}</h3>

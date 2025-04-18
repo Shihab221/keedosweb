@@ -8,7 +8,7 @@ export const categoriesData = [
     },
     {
         id:2,
-        title:"Games & Puzsels",
+        title:"Games ",
         image:"/images/Games.png",
     },
     {

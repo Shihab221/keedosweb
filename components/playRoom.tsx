@@ -14,10 +14,10 @@ const PlayRoom = () => {
     }}
     className='py-10 px-10'
     >
-      <div className='px-20 bg-white flex flex-col w-full sm:w-1/2 h-full   items-start justify-center text-neutral-900'>
-        <h2 className='text-4xl font-bold mb-4 mt-10'>The Play Room <br/>Needs an Overhual!</h2>
+      <div className='px-10 sm:px-20 bg-white flex flex-col w-full sm:w-1/2 h-full   items-start justify-center text-neutral-900'>
+        <h2 className='text-2xl sm:text-4xl font-bold mb-4 mt-10'>The Play Room <br/>Needs an Overhual!</h2>
         <p className='text-justify text-neutral-700 text-lg'>Toys are scattered haphazardly, shelves are overflowing, and the overall atmosphere lacks the creativity and functionality that a playroom should provide.</p>
-        <div className='flex flex-row my-5 items-center w-full justify-between'>
+        <div className='flex flex-col sm:flex-row my-5 items-center w-full justify-between'>
             <Button 
             text = "Shop Now"
             />

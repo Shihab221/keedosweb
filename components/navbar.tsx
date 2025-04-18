@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
 
       {/* navbar */}
-      <div className='flex flex-row justify-between'>
+      <div className='hidden sm:block flex flex-row justify-between'>
         <div className='bg-neutral-900 flex flex-row justify-between items-center w-72'>
           <p className='text-center px-4 py-2'>Browse Categories</p>
           <BiArrowFromTop size={16} className='text-white mx-4'/>

@@ -3,8 +3,21 @@ import Image from 'next/image'
 import React from 'react'
 import {  FaStar } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
+export interface ProductCardProps {
+  id:number,
+  title: string;
+  price: number;
+  rating: number;
+  reviews: string;
+  badge?: string;
+  badgeColor?: string;
+  discountBadgeColor?: string;
+  image: string;
+  discount?: string;
+  originalPrice?: number;
+}
 
-const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discountBadgeColor, image, discount, originalPrice}) => {
+const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discountBadgeColor, image, discount, originalPrice}: ProductCardProps) => {
   return (
     <div className='flex flex-col items-start rounded-lg text-neutral-900 '>
       
@@ -36,7 +49,12 @@ const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discount
         ))}
             <p className='text-xs px-1'>({reviews})</p>
         </div>
-        <p className='font-bold text-start text-lg mt-2'>${price}</p>
+        
+        <div className='flex flex-row items-center gap-4 mt-2'>
+          <p className='font-bold text-start text-lg '>${price}</p>
+          {originalPrice && <p className='text-sm text-neutral-400 text-'>{originalPrice}</p>}
+        </div>
+        
       
     </div>
   )

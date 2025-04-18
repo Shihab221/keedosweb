@@ -1,3 +1,5 @@
+import { ProductCardProps } from "./components/productCard";
+
 export const categoriesData = [
     {
         id:1,
@@ -75,7 +77,7 @@ export const popularProductsData = [
     },
   ];
 
-export const topProductsData = [
+export const topProductsData:ProductCardProps[] = [
   {
     id: 1,
     title: "Walt Disney Tribute Camera",

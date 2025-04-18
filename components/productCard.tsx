@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import {  FaStar } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
+import {motion} from 'framer-motion'
 export interface ProductCardProps {
   id:number,
   title: string;
@@ -19,7 +20,13 @@ export interface ProductCardProps {
 
 const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discountBadgeColor, image, discount, originalPrice}: ProductCardProps) => {
   return (
-    <div className='flex flex-col items-start rounded-lg text-neutral-900 '>
+    <motion.div 
+    className='flex flex-col items-start rounded-lg text-neutral-900 '
+    initial={{opacity:0 , y:50}}
+    whileInView={{opacity:1 , y:0}}
+    transition={{duration:0.3}}
+    viewport={{once:true}}
+    >
       
        <div className='flex flex-row justify-between items-center w-full bg-neutral-100 px-2 py-3'>
             
@@ -56,7 +63,7 @@ const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discount
         </div>
         
       
-    </div>
+    </motion.div>
   )
 }
 

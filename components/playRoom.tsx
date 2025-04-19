@@ -14,7 +14,7 @@ const PlayRoom = () => {
         height: '75vh', // Full viewport height
         width: '100%', // Full width
     }}
-    className='py-10 px-20'
+    className='py-10 px-8 sm:px-20'
     >
       <motion.div className='px-10 sm:px-20 bg-white flex flex-col w-full sm:w-1/2 h-full   items-start justify-center text-neutral-900'
       initial={{opacity:0 , x:50}}

@@ -5,7 +5,7 @@ import logo from '../public/images/logo2.png'
 import footerimage from "../public/images/photo-trendy-baby-toys-playtime-accessories_933496-27548-removebg-preview.png"
 const Footer = () => {
   return (
-    <div className='flex flex-col px-10 pt-10 my-10'>
+    <div className='flex flex-col px-20 pt-10 my-10'>
 
       <div className='flex flex-col sm:flex-row items-center'>
         <div className='mx-10 w-sm flex flex-col items-center sm:items-start mb-4'>

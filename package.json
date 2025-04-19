@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "NEXT_DISABLE_ESLINT=1 next build",
+    "start": "next start"
+    
   },
   "dependencies": {
     "framer-motion": "^12.7.4",

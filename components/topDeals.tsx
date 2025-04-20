@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductCard from './productCard'
 import { topProductsData } from '@/constant'
+import Link from 'next/link'
 
 const TopDeals = () => {
   return (
@@ -8,10 +9,12 @@ const TopDeals = () => {
       <h2 className='text-2xl font-bold mb-6'>Top deals just for you today</h2>
       <div className='flex flex-col sm:flex-row flex-wrap items-center justify-between  gap-4'>
         {topProductsData.map((item,index)=>(
+          <Link href={`productDetails/${item.id}`} key={index}>
             <ProductCard 
             key={index}
             {...item}
             />
+          </Link>
         ))}
 
       </div>

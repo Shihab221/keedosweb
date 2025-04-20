@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import { Poppins } from 'next/font/google';
 import { Coustard } from "next/font/google";
-
+import Head from 'next/head';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -37,6 +37,8 @@ export default function RootLayout({
         style={{ backgroundColor: "white" }}
       
       >
+        
+
         <Navbar />
         {children}
         <div className="bg-neutral-800">

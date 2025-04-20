@@ -7,9 +7,16 @@ import PopularToys from '@/components/popularToys'
 import PlayRoom from '@/components/playRoom'
 import Footer from '@/components/footer'
 import TopDeals from '@/components/topDeals'
+import Head from 'next/head'
 const page = () => {
   return (
+    
     <div className='bg-white '>
+      <Head>
+          <title>My Awesome Site</title>
+          <meta name="description" content="This is my custom website" />
+
+    </Head>
       <Image
       src={heroImage}
       alt='hero_image'

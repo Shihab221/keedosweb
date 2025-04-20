@@ -4,6 +4,7 @@ import React from 'react'
 import {  FaStar } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
 import {motion} from 'framer-motion'
+import Link from 'next/link'
 export interface ProductCardProps {
   id:number,
   title: string;

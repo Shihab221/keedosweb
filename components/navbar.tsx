@@ -8,6 +8,9 @@ import { FaSearch, FaBars, FaCross } from "react-icons/fa"
 import { BiArrowFromTop } from 'react-icons/bi'
 import Sidebar from './sidebar'
 import { IoClose, IoMenu } from 'react-icons/io5'
+import {motion, AnimatePresence} from 'framer-motion'
+
+
 const navbarData = [
     {title:"Home", url:"#" },
     {title:"Best Sellers", url:"#" },
@@ -23,7 +26,7 @@ const Navbar = () => {
   return (
     <div className='w-full px-5 sm:px-20'>
       {/* search bar */}
-      <div className='flex flex-row items-center justify-between py-4'>
+      <div className='flex flex-row items-center justify-between py-2'>
         <Image 
         src={logo}
         alt='logo'
@@ -31,13 +34,18 @@ const Navbar = () => {
         height={100}
         className='sm:block hidden'
         />
+        <motion.button
+        whileTap={{ scale: 0.9 }}
+          
+        >
         {
           isOpen ? (
-            <IoClose className='sm:hidden block mx-2' size={64} color='black' onClick={()=> setIsOpen(false)}/>
+            <IoClose className='sm:hidden block mx-2' size={32} color='black' onClick={()=> setIsOpen(false)}/>
           ) : (
-            <IoMenu className='sm:hidden block mx-2' size={64} color='black' onClick={()=> setIsOpen(true)}/>
+            <IoMenu className='sm:hidden block mx-2' size={32} color='black' onClick={()=> setIsOpen(true)}/>
           )
         }
+        </motion.button>
         
 
         <div className="relative w-2xl">
@@ -68,11 +76,25 @@ const Navbar = () => {
         
       </div>
 
-      {
-        isOpen && (
-          <Sidebar />
-        )
-      }
+      {/* mobile navbar */}
+      {/* <AnimatePresence> */}
+        {
+          isOpen && (
+            <motion.div
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -50, opacity: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="h-full "
+            >
+              <Sidebar />
+            </motion.div>
+            
+          )
+        }
+      {/* </AnimatePresence> */}
+
+     
 
       {/* navbar */}
       <div className='hidden sm:block '>

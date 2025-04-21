@@ -1,11 +1,13 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, {useState} from 'react'
 import logo from "../public/images/logo2.png"
 import cart from "../public/images/cart.png"
 import profile from "../public/images/profile.png"
-import { FaSearch } from "react-icons/fa"
+import { FaSearch, FaBars, FaCross } from "react-icons/fa"
 import { BiArrowFromTop } from 'react-icons/bi'
-
+import Sidebar from './sidebar'
+import { IoClose, IoMenu } from 'react-icons/io5'
 const navbarData = [
     {title:"Home", url:"#" },
     {title:"Best Sellers", url:"#" },
@@ -16,6 +18,8 @@ const navbarData = [
     {title:"About Keedos", url:"#" },
 ]
 const Navbar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className='w-full px-5 sm:px-20'>
       {/* search bar */}
@@ -27,6 +31,15 @@ const Navbar = () => {
         height={100}
         className='sm:block hidden'
         />
+        {
+          isOpen ? (
+            <IoClose className='sm:hidden block mx-2' size={64} color='black' onClick={()=> setIsOpen(false)}/>
+          ) : (
+            <IoMenu className='sm:hidden block mx-2' size={64} color='black' onClick={()=> setIsOpen(true)}/>
+          )
+        }
+        
+
         <div className="relative w-2xl">
           <input
             type="text"
@@ -54,6 +67,12 @@ const Navbar = () => {
         <button className='bg-gradient-to-r from-violet-300 to-blue-300 text-white px-2 sm:px-6 py-2 rounded-full cursor-pointer text-sm sm:text-md sm:block hidden'>Sign In</button>
         
       </div>
+
+      {
+        isOpen && (
+          <Sidebar />
+        )
+      }
 
       {/* navbar */}
       <div className='hidden sm:block '>

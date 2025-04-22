@@ -20,8 +20,8 @@ const Categories = () => {
   }
 
   return (
-    <div className='px-10 flex flex-col items-center my-10 w-full'>
-      <div className='rounded-xl shadow-md px-4 py-4 w-full sm:w-2/3'>
+    <div className='px-5 sm:px-10 flex flex-col items-center my-10 w-full'>
+      <div className='rounded-xl shadow-none sm:shadow-md px-0 sm:px-4 py-4 w-full sm:w-2/3'>
         <div className='flex flex-row items-center mb-4 justify-between'>
           <h2 className='text-neutral-900 font-bold text-2xl'>Top Categories</h2>
           <div className='flex flex-row justify-between gap-4'>

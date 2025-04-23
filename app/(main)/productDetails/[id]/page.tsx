@@ -4,6 +4,17 @@ import { useParams } from 'next/navigation'
 import { topProductsData } from '@/constant';
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
+import Button from '@/components/button';
+const colorsData = [
+  "bg-gradient-to-r from-yellow-400 to-orange-700",
+  "bg-gradient-to-r from-orange-500 to-red-500",
+  "bg-gradient-to-r from-blue-500 to-purple-500",
+  "bg-gradient-to-r from-purple-500 to-pink-500",
+  "bg-gradient-to-r from-green-500 to-teal-500",
+  "bg-gradient-to-r from-teal-500 to-green-500",
+  "bg-gradient-to-r from-red-500 to-pink-500",
+  "bg-gradient-to-r from-pink-500 to-red-500",
+]
 const page = () => {
     const params = useParams();
     const  id  = params?.id;
@@ -34,7 +45,7 @@ const page = () => {
           <div className='flex flex-row gap-4 items-center text-xl'>
             <p className='font-semibold'>${product.price}</p>
             {product.originalPrice && (
-            <p className='text-neutral-500 line-through text-md'>${product.originalPrice}</p>
+            <p className='text-neutral-500 line-through text-sm'>${product.originalPrice}</p>
             )}
           </div>
           <div className={`${product.discountBadgeColor} px-4 py-2 flex w-fit text-white`}>
@@ -42,12 +53,30 @@ const page = () => {
           </div>
 
           <div className='flex flex-row items-center'>
+            Rating: {" "}
             {[...Array(5)].map((_, i) => (
             <FaStar key={i} size={14} className='text-yellow-500'/>
               ))}
-               <p className='text-xs px-1'>({product.reviews})</p>
+               
           </div>
-          
+          <p className=''>Total reviews: {product.reviews}+</p>
+            
+          {/* select colors */}
+          <div className='flex flex-row gap-4 items-center'>
+            <h4 className='font-semibold'>Select Colors:</h4>
+              {colorsData.map((color, index) => (
+                <div  key={index}>
+                  <div className={`w-12 h-12 ${color} rounded-full border-2 border-white cursor-pointer`} onClick={() => alert(`Selected color: ${color}`)}></div>        
+                </div>
+              ))}
+          </div>
+
+          <Button 
+          text='Add to Cart'
+          />
+          <p className='text-sm text-neutral-800 text-justify'>
+          {product.description}
+        </p>
         </div>
         
       </div>

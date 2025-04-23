@@ -9,6 +9,7 @@ export interface ProductCardProps {
   id:number,
   title: string;
   price: number;
+  description?: string;
   rating: number;
   reviews: string;
   badge?: string;
@@ -17,6 +18,8 @@ export interface ProductCardProps {
   image: string;
   discount?: string;
   originalPrice?: number;
+  sizes?: string[];
+  
 }
 
 const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discountBadgeColor, image, discount, originalPrice}: ProductCardProps) => {

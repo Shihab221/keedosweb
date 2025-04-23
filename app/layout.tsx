@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import { Poppins } from 'next/font/google';
 import { Coustard } from "next/font/google";
 import Head from 'next/head';
+import Footer from "@/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
 
         <Navbar />
         {children}
+        <Footer />
         <div className="bg-neutral-800">
           <p className="text-neutral-400 text-sm text-center py-2">ডেভেলপড বাই - শিহাব আহমেদ</p>
         </div>

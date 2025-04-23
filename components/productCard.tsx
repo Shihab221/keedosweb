@@ -19,10 +19,11 @@ export interface ProductCardProps {
   discount?: string;
   originalPrice?: number;
   sizes?: string[];
+  category?: string;
   
 }
 
-const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discountBadgeColor, image, discount, originalPrice}: ProductCardProps) => {
+const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discountBadgeColor, image, discount, originalPrice,sizes}: ProductCardProps) => {
   return (
     <motion.div 
     className='flex flex-col items-start rounded-lg text-neutral-900 '
@@ -63,7 +64,7 @@ const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discount
         
         <div className='flex flex-row items-center gap-4 mt-2'>
           <p className='font-bold text-start text-lg '>${price}</p>
-          {originalPrice && <p className='text-sm text-neutral-400 text-'>{originalPrice}</p>}
+          {originalPrice && <p className='text-sm text-neutral-400 line-through'>{originalPrice}</p>}
         </div>
         
       

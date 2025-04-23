@@ -34,50 +34,8 @@ export const categoriesData = [
 ]
 
 
-export const popularProductsData = [
-    {
-      id: 1,
-      title: 'Kids Metal Airplane',
-      price: 299.99,
-      rating: 4.5,
-      reviews: '9.5K',
-      badge: '10% Off',
-      badgeColor: 'bg-red-500',
-      image: '/images/Plane.png',
-    },
-    {
-      id: 2,
-      title: 'Chevrolet Corvette 1961',
-      price: 149.99,
-      rating: 4.5,
-      reviews: '7.9K',
-      badge: 'Exclusive',
-      badgeColor: 'bg-gradient-to-r from-violet-300 to-blue-300 ',
-      image: '/images/dodgecar.png',
-    },
-    {
-      id: 3,
-      title: 'Walt Disney Tribute Camera',
-      price: 19.68,
-      rating: 4.5,
-      reviews: '472',
-      badge: 'New',
-      badgeColor: 'bg-teal-700',
-      image: '/images/waltcamera.png',
-    },
-    {
-      id: 4,
-      title: '3D Realistic Glob View',
-      price: 20.81,
-      rating: 4.5,
-      reviews: '4.2K',
-      badge: 'Exclusive',
-      badgeColor: 'bg-gradient-to-r from-violet-300 to-blue-300 ',
-      image: '/images/globe.png',
-    },
-  ];
 
-export const topProductsData: ProductCardProps[] = [
+export const ProductsData: ProductCardProps[] = [
     {
       id: 1,
       title: "Walt Disney Tribute Camera",
@@ -90,6 +48,7 @@ export const topProductsData: ProductCardProps[] = [
       reviews: "9.5K",
       image: "/images/product1.png",
       sizes: ["Standard"],
+      category: 'top',
     },
     {
       id: 2,
@@ -105,6 +64,7 @@ export const topProductsData: ProductCardProps[] = [
       reviews: "409",
       image: "/images/product2.png",
       sizes: ["Small", "Medium", "Large"],
+      category: 'top',
     },
     {
       id: 3,
@@ -118,6 +78,7 @@ export const topProductsData: ProductCardProps[] = [
       reviews: "72",
       image: "/images/product3.png",
       sizes: ["A3", "A2", "A1"],
+      category: 'top',
     },
     {
       id: 4,
@@ -131,6 +92,7 @@ export const topProductsData: ProductCardProps[] = [
       reviews: "9.5K",
       image: "/images/product4.png",
       sizes: ["Mini", "Medium", "Large"],
+      category: 'top',
     },
     {
       id: 5,
@@ -144,6 +106,54 @@ export const topProductsData: ProductCardProps[] = [
       reviews: "52",
       image: "/images/product2.png",
       sizes: ["Small", "Medium", "Large"],
+      category: 'top',
+    },
+    {
+      id: 6,
+      title: 'Kids Metal Airplane',
+      price: 299.99,
+      rating: 4.5,
+      reviews: '9.5K',
+      badge: '10% Off',
+      badgeColor: 'bg-red-500',
+      image: '/images/Plane.png',
+      category: 'popular',
+      
+    },
+    {
+      id: 7,
+      title: 'Chevrolet Corvette 1961',
+      price: 149.99,
+      rating: 4.5,
+      reviews: '7.9K',
+      badge: 'Exclusive',
+      badgeColor: 'bg-gradient-to-r from-violet-300 to-blue-300 ',
+      image: '/images/dodgecar.png',
+      category: 'popular',
+      
+    },
+    {
+      id: 8,
+      title: 'Walt Disney Tribute Camera',
+      price: 19.68,
+      rating: 4.5,
+      reviews: '472',
+      badge: 'New',
+      badgeColor: 'bg-teal-700',
+      image: '/images/waltcamera.png',
+      category: 'popular',
+      
+    },
+    {
+      id: 9,
+      title: '3D Realistic Glob View',
+      price: 20.81,
+      rating: 4.5,
+      reviews: '4.2K',
+      badge: 'Exclusive',
+      badgeColor: 'bg-gradient-to-r from-violet-300 to-blue-300 ',
+      image: '/images/globe.png',
+      category: 'popular',
     },
   ];
   

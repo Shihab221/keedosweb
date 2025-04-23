@@ -29,7 +29,7 @@ const page = () => {
       <PopularToys />
       <PlayRoom />
       <TopDeals />
-      <Footer />
+      
     </div>
   )
 }

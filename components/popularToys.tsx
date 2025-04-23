@@ -1,9 +1,11 @@
 import React from 'react'
-import { popularProductsData } from '@/constant'
+import { ProductsData } from '@/constant'
 import ProductCard from './productCard'
 import Button from './button'
+import Link from 'next/link'
 
 const PopularToys = () => {
+  const popularProducts = ProductsData.filter((item)=> item.category === 'popular')
   return (
     <div className='px-10 sm:px-20 py-10 my-10'>
       <div className='mb-4 flex flex-col sm:flex-row justify-between items-center text-neutral-900'>
@@ -13,7 +15,8 @@ const PopularToys = () => {
         />
       </div>
       <div className='flex flex-col sm:flex-row  items-center justify-between flex-wrap'>
-        {popularProductsData.map((item) => (
+        {popularProducts.map((item) => (
+            <Link href={`/productDetails/${item.id}`} key={item.id}>
             <ProductCard 
             key={item.id}
             {...item}
@@ -25,6 +28,7 @@ const PopularToys = () => {
             // badgeColor={item.badgeColor}
             // image={item.image}
             />
+            </Link>
         ))}
       </div>
     </div>

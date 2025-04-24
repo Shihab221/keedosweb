@@ -16,7 +16,7 @@ const Footer = () => {
             height={100}
             className='object-contain mb-4'
           />
-          <p className='text-neutral-700'>Keedos Store 2/A, RA 7300 building,<br/>Jhenaidah - 7300, Khulna, Bangladesh. <br/>Must be 18 years to purchase online.</p>
+          <p className='text-neutral-700 text-justify'>Keedos Store 2/A, RA 7300 building,<br/>Jhenaidah - 7300, Khulna, Bangladesh. <br/>Must be 18 years to purchase online.</p>
         </div>
 
         <div className='text-neutral-900 flex flex-col md:flex-row items-center sm:items-start justify-between w-full gap-4'>

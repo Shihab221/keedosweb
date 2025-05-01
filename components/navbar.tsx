@@ -9,6 +9,7 @@ import { BiArrowFromTop } from 'react-icons/bi'
 import Sidebar from './sidebar'
 import { IoClose, IoMenu } from 'react-icons/io5'
 import {motion, AnimatePresence} from 'framer-motion'
+import Link from 'next/link'
 
 
 const navbarData = [
@@ -56,13 +57,15 @@ const Navbar = () => {
           />
           <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-violet-500 " size={20} />
         </div>
-        <Image 
-        src={cart}
-        alt='cart_icon'
-        width={100}
-        height={100}
-        className='w-16 h-16 object-contain'
-        />
+        <Link href="/cart">
+          <Image 
+          src={cart}
+          alt='cart_icon'
+          width={100}
+          height={100}
+          className='w-16 h-16 object-contain'
+          />
+        </Link>
 
         <Image 
         src={profile}

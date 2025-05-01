@@ -75,7 +75,8 @@ const Navbar = () => {
         className='w-6 h-6 object-contain block sm:hidden'
         />
 
-        <button className='bg-gradient-to-r from-violet-300 to-blue-300 text-white px-2 sm:px-6 py-2 rounded-full cursor-pointer text-sm sm:text-md sm:block hidden'>Sign In</button>
+        <Link href="/userLogin" className='hidden sm:block'>
+        <button className='bg-gradient-to-r from-violet-300 to-blue-300 text-white px-2 sm:px-6 py-2 rounded-full cursor-pointer text-sm sm:text-md sm:block hidden'>Sign In</button></Link>
         
       </div>
 

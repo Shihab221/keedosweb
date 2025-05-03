@@ -63,7 +63,7 @@ const Navbar = () => {
           alt='cart_icon'
           width={100}
           height={100}
-          className='w-16 h-16 object-contain'
+          className='sm:w-16 sm:h-16 object-contain'
           />
         </Link>
 

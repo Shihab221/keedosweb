@@ -1,9 +1,12 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import profile from "../../../public/images/profile.jpg"
 import { FaStar } from 'react-icons/fa'
 import { FaMapLocation } from 'react-icons/fa6'
+import { useState } from 'react'
 const page = () => {
+  const[activeTab,setActiveTab]=useState('profile');
   return (
     <div className='flex flex-col sm:flex-row items-center gap-2 px-10 sm:px-20 py-10 text-neutral-900'>
       {/* left side user personal data */}
@@ -42,7 +45,43 @@ const page = () => {
 
       {/* right side user statistics */}
       <div>
-        stat
+      <div className="flex space-x-4 border-b mb-4">
+        <button
+          onClick={() => setActiveTab('profile')}
+        >
+          Profile setup
+        </button>
+        <button
+          onClick={() => setActiveTab('address')}
+          
+        >
+          Address Profile
+        </button>
+      </div>
+        
+        
+        {/* profile setup */}
+        {activeTab === 'profile' && (
+          <div>
+          <p>Shihab Ahmed</p>
+          <p>ashihab205@gmail.com</p>
+          <p>+8801770716570</p>
+          <p>Date of birth: 22nd November 2003</p>
+          <p>Change password</p>
+        </div>
+        )}
+        
+
+        {/* address profile */}
+        {activeTab === 'address' && (
+          <div>
+           <p>DEFAULT SHIPPING ADDRESS</p>
+           <p>Shihab Ahemed</p>
+           <p>House no - 0-687</p>
+           <p>Jhenaidah, Bangladesh</p>
+           <p>(+880)1770716570</p>
+        </div>
+      )}
       </div>
     </div>
   )

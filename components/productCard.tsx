@@ -66,7 +66,7 @@ const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discount
           <p className='font-bold text-start text-lg '>${price}</p>
           {originalPrice && <p className='text-sm text-neutral-400 line-through'>{originalPrice}</p>}
         </div>
-        
+       
       
     </motion.div>
   )

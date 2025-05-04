@@ -2,8 +2,8 @@
 import Image from 'next/image'
 import React from 'react'
 import profile from "../../../public/images/profile.jpg"
-import { FaStar } from 'react-icons/fa'
-import { FaMapLocation } from 'react-icons/fa6'
+import { FaAddressBook, FaAddressCard, FaEdit, FaMap, FaStar } from 'react-icons/fa'
+import { FaMapLocation, FaPerson, FaPersonFalling } from 'react-icons/fa6'
 import { useState } from 'react'
 const page = () => {
   const[activeTab,setActiveTab]=useState('profile');
@@ -48,14 +48,16 @@ const page = () => {
       <div className="flex space-x-4 mb-4 bg-sky-100  text-neutral-800 w-full">
         <button
           onClick={() => setActiveTab('profile')}
-          className={`${activeTab === 'profile' ? 'text-sky-500 border-b border-sky-500' : 'text-neutral-800'}  px-2 py-2 cursor-pointer`}
+          className={`flex flex-row gap-2 items-center ${activeTab === 'profile' ? 'text-sky-500 border-b border-sky-500' : 'text-neutral-800'}  px-2 py-2 cursor-pointer`}
         >
+          <FaAddressCard size={20}/>
           Profile setup
         </button>
         <button
           onClick={() => setActiveTab('address')}
-          className={`${activeTab === 'address' ? 'text-sky-500 border-b border-sky-500' : 'text-neutral-800'}  px-2 py-2 cursor-pointer `}
+          className={`flex flex-row gap-2 items-center ${activeTab === 'address' ? 'text-sky-500 border-b border-sky-500' : 'text-neutral-800'}  px-2 py-2 cursor-pointer `}
         >
+          <FaMap size={20}/>
           Address Profile
         </button>
       </div>
@@ -63,24 +65,32 @@ const page = () => {
         
         {/* profile setup */}
         {activeTab === 'profile' && (
-          <div>
-          <p>Shihab Ahmed</p>
-          <p>ashihab205@gmail.com</p>
-          <p>+8801770716570</p>
-          <p>Date of birth: 22nd November 2003</p>
-          <p>Change password</p>
+          <div className='flex flex-col gap-2 items-start'>
+          <p className='font-semibold'>Shihab Ahmed</p>
+          <p>E-mail: ashihab205@gmail.com</p>
+          <p>Contact: +8801770716570</p>
+          <p>Date of birth: 22nd November, 2003</p>
+          <p> Password: *******</p>
+          <button className='flex flex-row gap-2 cursor-pointer px-2 py-1 border border-sky-500 text-sky-500 bg-sky-100'>
+            <FaEdit size={20}/>
+            Edit
+          </button>
         </div>
         )}
         
 
         {/* address profile */}
         {activeTab === 'address' && (
-          <div>
+          <div className='flex flex-col gap-2 items-start'>
            <p>DEFAULT SHIPPING ADDRESS</p>
-           <p>Shihab Ahemed</p>
+           <p className='font-semibold'>Shihab Ahemed</p>
            <p>House no - 0-687</p>
            <p>Jhenaidah, Bangladesh</p>
            <p>(+880)1770716570</p>
+           <button className='flex flex-row gap-2 cursor-pointer px-2 py-1 border border-sky-500 text-sky-500 bg-sky-100'>
+            <FaEdit size={20}/>
+            Edit
+          </button>
         </div>
       )}
       </div>

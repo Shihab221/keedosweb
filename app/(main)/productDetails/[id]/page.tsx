@@ -64,7 +64,7 @@ const page = ({}) => {
             <div className='flex flex-row items-center'>
               Rating: {" "}
               {[...Array(5)].map((_, i) => (
-              <FaStar key={i} size={14} className='text-yellow-500'/>
+              <FaStar key={i} size={14} className='text-sky-500'/>
                 ))}
                 
             </div>

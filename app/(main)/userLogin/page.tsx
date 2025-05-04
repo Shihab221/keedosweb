@@ -14,7 +14,7 @@ const page = () => {
             <p className='text-sm text-neutral-900 '>Forgot Password?</p>
             <p className='text-sm text-neutral-500'>New to keedos? </p>
           </div>
-            <Link href="/userSignup" className='text-blue-500 underline items-end'><button className='border px-2 py-1 border-blue-400 text-blue-400 bg-blue-50 cursor-pointer'>SignUp</button></Link>
+            <Link href="/userSignup" className='text-sky-500 underline items-end'><button className='border px-2 py-1 border-sky-400 text-sky-500 bg-blue-50 cursor-pointer'>SignUp</button></Link>
         </div>
         
       </div>

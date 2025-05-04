@@ -57,7 +57,7 @@ const ProductCard = ({title, price, rating, reviews, badge, badgeColor, discount
         <p className='font-semibold mt-2'>{title}</p>
         <div className='flex flex-row items-center'>
         {[...Array(5)].map((_, i) => (
-          <FaStar key={i} size={14} className='text-yellow-500'/>
+          <FaStar key={i} size={14} className='text-sky-500'/>
         ))}
             <p className='text-xs px-1'>({reviews})</p>
         </div>

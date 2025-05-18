@@ -8,6 +8,7 @@ import PlayRoom from '@/components/playRoom'
 import Footer from '@/components/footer'
 import TopDeals from '@/components/topDeals'
 import Head from 'next/head'
+import BestSelling from '@/components/bestSelling'
 const page = () => {
   return (
     
@@ -29,7 +30,7 @@ const page = () => {
       <PopularToys />
       <PlayRoom />
       <TopDeals />
-      
+      <BestSelling />
     </div>
   )
 }

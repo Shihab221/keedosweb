@@ -17,13 +17,13 @@ export interface ProductCardProps {
 const HorizontalCard = ({title,price,reviews, image, discount}:ProductCardProps) => {
   return (
     <motion.div 
-    className='flex flex-wrap w-fit text-neutral-900 w-[400px] '
+    className='flex flex-wrap text-neutral-900 w-[325px] '
     initial={{opacity:0 , y:50}}
     whileInView={{opacity:1 , y:0}}
     transition={{duration:0.3}}
     viewport={{once:true}}
     >
-      <div className='flex flex-row  items-center w-full bg-neutral-100 px-2 text-neutral-900 w-sm'>
+      <div className='flex flex-row items-center w-full bg-neutral-100 px-2 text-neutral-900 w-sm'>
         <Image 
             src={image}
             alt='product_image'

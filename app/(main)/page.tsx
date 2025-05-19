@@ -9,6 +9,7 @@ import Footer from '@/components/footer'
 import TopDeals from '@/components/topDeals'
 import Head from 'next/head'
 import BestSelling from '@/components/bestSelling'
+import TopRated from '@/components/topRated'
 const page = () => {
   return (
     
@@ -30,7 +31,15 @@ const page = () => {
       <PopularToys />
       <PlayRoom />
       <TopDeals />
-      <BestSelling />
+      <div className='flex sm:flex-row flex-col px-10 sm:px-20 justify-between gap-4'>
+        <div className=' w-full '>
+          <BestSelling />
+        </div>
+        <div className='w-full '>
+          <TopRated />
+        </div>
+      </div>
+      
     </div>
   )
 }
